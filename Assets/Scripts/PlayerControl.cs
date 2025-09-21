@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
 
     private float lookSense = 1.5f;
     private float moveSpeed = 4f;
-    //private float jumpHeight = 5f;
+    private float jumpHeight = 4f;
     private float horizontalInput, verticalInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,9 +35,9 @@ public class PlayerControl : MonoBehaviour
         move.y = rb.linearVelocity.y;
         rb.linearVelocity = move;
 
-        /*if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpHeight, rb.linearVelocity.z);
-        }*/
+        }
     }
 }
